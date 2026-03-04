@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: hackathon-onco-whatsapp
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: MODEL_API_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+

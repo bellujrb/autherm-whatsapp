@@ -1,0 +1,46 @@
+{
+  "name": "whatsapp-ia",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot para triagem M-CHAT-R/F com follow-up para pais e responsáveis",
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "dev": "nest start --watch",
+    "start:prod": "node dist/main"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^0.0.27",
+    "@ai-sdk/openai": "^2.0.59",
+    "@langchain/core": "^0.2.0",
+    "@langchain/openai": "^0.2.0",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@supabase/supabase-js": "^2.98.0",
+    "@whiskeysockets/baileys": "^6.6.0",
+    "ai": "^3.0.0",
+    "axios": "^1.6.5",
+    "langchain": "^0.2.0",
+    "pino": "^8.17.2",
+    "qrcode-terminal": "^0.12.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.42.0",
+    "prettier": "^3.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
+  }
+}
