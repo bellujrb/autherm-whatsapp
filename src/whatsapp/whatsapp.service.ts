@@ -211,7 +211,7 @@ export class WhatsappService implements OnModuleDestroy {
       'Desculpe, não entendi sua mensagem. 🤔',
       '',
       '📋 *Posso te ajudar com:*',
-      '• Digite *"triagem"* para iniciar o questionário M-CHAT-R/F',
+      '• Digite *"triagem"* para iniciar o questionário',
       '• Digite *"AUTherm"* para saber mais sobre nossa empresa',
       '• Digite *"exame"* para informações sobre a avaliação fisiológica',
       '• Digite *"lista"* para entrar na lista de espera',
@@ -231,7 +231,7 @@ export class WhatsappService implements OnModuleDestroy {
       '',
       '📋 Posso te ajudar com:',
       '1️⃣ *Saber mais sobre a AUTherm* - como funcionamos e o que fazemos',
-      '2️⃣ *Fazer a triagem M-CHAT-R/F* - questionário rápido para crianças de 16 a 30 meses',
+      '2️⃣ *Fazer a triagem* - questionário rápido para crianças de 16 a 30 meses',
       '',
       '💬 O que você gostaria de fazer? Pode me dizer com suas palavras ou escolher uma das opções acima.',
     ].join('\n');
@@ -378,7 +378,7 @@ export class WhatsappService implements OnModuleDestroy {
       '',
       'Somos uma startup que apoia famílias na identificação precoce de sinais do autismo, combinando:',
       '',
-      '📊 *Triagem comportamental* - Questionário M-CHAT-R/F validado cientificamente',
+      '📊 *Triagem comportamental* - Questionário com 20 perguntas sobre o comportamento da criança',
       '🔬 *Avaliação fisiológica* - Análise de sinais do corpo em clínica ou hospital parceiro',
       '',
       '❤️ Nossa missão é ajudar pais a entenderem o desenvolvimento dos seus filhos sem pressão ou pânico.',
@@ -396,15 +396,19 @@ export class WhatsappService implements OnModuleDestroy {
 
   private async sendExamInfo(sender: string): Promise<void> {
     const text = [
-      '🔍 *Exame da AUTherm*',
+      '🔍 *Exame AUTherm*',
       '',
-      'O exame da AUTherm é uma *avaliação fisiológica* mais detalhada que ajuda a entender melhor o desenvolvimento da sua criança. Ele é realizado em clínicas ou hospitais parceiros e pode incluir uma série de atividades e observações para avaliar as habilidades sociais, de comunicação e comportamentais.',
+      'O exame AUTherm é uma avaliação complementar que ajuda profissionais de saúde a entender melhor o desenvolvimento da criança.',
+      '',
+      'Ele utiliza uma tecnologia não invasiva que analisa sinais fisiológicos e comportamentais que podem estar relacionados ao desenvolvimento neurológico.',
+      '',
+      'O exame é realizado em *clínicas e hospitais parceiros* e serve como apoio para médicos e especialistas na investigação de possíveis sinais de autismo.',
       '',
       '💡 *Próximos passos:*',
-      '1. *Consulta com o pediatra:* Discuta os resultados da triagem e a necessidade do exame',
-      '2. *Lista de espera:* Se seu resultado indicou risco moderado ou alto, posso ativar sua inclusão na lista de espera da AUTherm para um acompanhamento mais próximo',
+      '1. *Converse com o pediatra:* leve o resultado da triagem para discutir se uma avaliação mais detalhada é recomendada.',
+      '2. *Lista de interesse AUTherm:* se você quiser, posso registrar seu interesse para realizar o exame nas nossas clínicas e hospitais parceiros.',
       '',
-      '🔑 Se você quiser que eu ative a lista de espera, basta responder *"lista"*.',
+      '🔑 Para entrar na lista, basta responder *"lista"*.',
     ].join('\n');
 
     await this.socket?.sendMessage(sender, { text });
