@@ -320,8 +320,8 @@ export class MchatService {
 
   private normalizeAnswer(input: string): RiskAnswer | null {
     const cleaned = input.trim().toLowerCase();
-    const positives = ['sim', 's', 'yes', 'y'];
-    const negatives = ['nao', 'não', 'n', 'no'];
+    const positives = ['sim', 's', 'ss', 'yes', 'y'];
+    const negatives = ['nao', 'não', 'n', 'nn', 'no'];
 
     if (positives.includes(cleaned)) {
       return 'sim';
