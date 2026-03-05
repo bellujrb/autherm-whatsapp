@@ -243,6 +243,12 @@ export class WhatsappService implements OnModuleDestroy {
 
   private userWantsToStartMchat(message: string): boolean {
     const normalized = message.toLowerCase().trim();
+
+    // Verificar se é exatamente "2" para evitar falsos positivos
+    if (normalized === '2') {
+      return true;
+    }
+
     const keywords = [
       'triagem',
       'questionário',
@@ -362,7 +368,11 @@ export class WhatsappService implements OnModuleDestroy {
   }
 
   private userAsksAboutAutherm(message: string): boolean {
-    const normalized = message.toLowerCase();
+    const normalized = message.toLowerCase().trim();
+    // Verificar se é exatamente "1" para evitar falsos positivos
+    if (normalized === '1') {
+      return true;
+    }
     return normalized.includes('autherm') || normalized.includes('1️⃣') || normalized.includes('opção 1') || normalized.includes('opcao 1') || normalized.includes('saber mais');
   }
 
